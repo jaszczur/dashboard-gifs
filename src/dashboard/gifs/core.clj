@@ -1,4 +1,4 @@
-(ns dashboard-gifs.core
+(ns dashboard.gifs.core
   (:gen-class))
 
 (defn -main
