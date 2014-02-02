@@ -7,4 +7,5 @@
 
 (deftest a-test
   (testing "parsing rss"
-    (is (= 3 (count (parse-sample-file))))))
+    (is (= 3 (count (parse-sample-file))))
+    (is (= "when customer changes specs once the project is nearly finished" (:title (first (parse-sample-file)))))))
