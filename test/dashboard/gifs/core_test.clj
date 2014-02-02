@@ -1,7 +1,10 @@
-(ns dashboard.gifs.core-test
+(ns dashboard.gifs.core
   (:require [clojure.test :refer :all]
             [dashboard.gifs.core :refer :all]))
 
+(defn parse-sample-file []
+  (parse-rss "test/sample-rss.xml"))
+
 (deftest a-test
-  (testing "FIXME, I fail."
-    (is (= 0 1))))
+  (testing "parsing rss"
+    (is (= 3 (count (parse-sample-file))))))

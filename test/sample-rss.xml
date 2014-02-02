@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <description />
+    <title>The coding love</title>
+    <generator>Tumblr (3.0; @thecodinglove)</generator>
+    <link>http://thecodinglove.com/</link>
+    <item>
+      <title>when customer changes specs once the project is nearly finished</title>
+      <description>/* by frontas */</description>
+      <link>http://thecodinglove.com/post/75180382035</link>
+      <guid>http://thecodinglove.com/post/75180382035</guid>
+      <pubDate>Fri, 31 Jan 2014 16:03:15 -0500</pubDate>
+      <category>customer</category>
+      <category>specs</category>
+      <category>project</category>
+      <category>gif</category>
+      <category>thecodinglove</category>
+      <dc:creator>kbironneau</dc:creator>
+    </item>
+    <item>
+      <title>when I finally finished debugging a legacy code</title>
+      <description>/* akashan */</description>
+      <link>http://thecodinglove.com/post/75170258279</link>
+      <guid>http://thecodinglove.com/post/75170258279</guid>
+      <pubDate>Fri, 31 Jan 2014 14:01:50 -0500</pubDate>
+      <category>finish</category>
+      <category>debug</category>
+      <category>legacy</category>
+      <category>code</category>
+      <category>gif</category>
+      <category>thecodinglove</category>
+      <dc:creator>kbironneau</dc:creator>
+    </item>
+    <item>
+      <title>when the server crashes and I am the last one in the office</title>
+      <description>/* by motores boy */</description>
+      <link>http://thecodinglove.com/post/75152865911</link>
+      <guid>http://thecodinglove.com/post/75152865911</guid>
+      <pubDate>Fri, 31 Jan 2014 10:01:34 -0500</pubDate>
+      <category>server</category>
+      <category>crash</category>
+      <category>office</category>
+      <category>gif</category>
+      <category>thecodinglove</category>
+      <dc:creator>kbironneau</dc:creator>
+    </item>
+  </channel>
+</rss>
+
