@@ -7,10 +7,13 @@
 (defn zip-xml [file-name]
   (zip/xml-zip (xml/parse file-name)))
 
+(defn child-text [loc child]
+  (dzx/text (dzx/xml1-> loc child)))
+
 (defn parse-rss [file-name]
   (let [zipped (zip-xml file-name)
         items (dzx/xml-> zipped :channel :item)]
-    items))
+    (map (fn [i] {:title (child-text i :title)}) items)))
 
 
 (defn -main
