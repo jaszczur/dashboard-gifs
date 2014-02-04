@@ -4,8 +4,8 @@
             [clojure.zip :as zip]
             [clojure.data.zip.xml :as dzx]))
 
-(defn zip-xml [file-name])
-  (zip/xml-zip (xml/parse file-name))
+(defn zip-xml [file-name]
+  (zip/xml-zip (xml/parse file-name)))
 
 (defn child-text [loc child]
   (dzx/text (dzx/xml1-> loc child)))
