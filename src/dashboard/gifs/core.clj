@@ -19,7 +19,8 @@
 
 (defn parse-rss [file-name]
   (let [zipped (zip-xml file-name)
-        items (dzx/xml-> zipped :channel :item)]
+        source (dzx/xml1-> zipped :channel :title)
+        items  (dzx/xml-> zipped :channel :item)]
     (map extract-data items)))
 
 

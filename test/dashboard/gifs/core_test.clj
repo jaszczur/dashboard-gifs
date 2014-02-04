@@ -12,4 +12,6 @@
     (testing "first title"
       (is (= "Explaining how git, gerrit, and jenkins work together" (:title result1))))
     (testing "first gif url"
-      (is (= "http://31.tumblr.com/69/tumblr_inline_n0kq.gif" (:image-url result1))))))
+      (is (= "http://31.tumblr.com/69/tumblr_inline_n0kq.gif" (:image-url result1))))
+    (testing "source title"
+      (is (= "DevOps Reactions" (:source result1))))))
