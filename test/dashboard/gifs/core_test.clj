@@ -5,7 +5,11 @@
 (defn parse-sample-file []
   (parse-rss "test/sample-rss.xml"))
 
-(deftest a-test
-  (testing "parsing rss"
-    (is (= 3 (count (parse-sample-file))))
-    (is (= "when customer changes specs once the project is nearly finished" (:title (first (parse-sample-file)))))))
+(deftest parsing-xml
+  (let [result1 (first (parse-sample-file))]
+    (testing "items count"
+      (is (= 3 (count (parse-sample-file)))))
+    (testing "first title"
+      (is (= "Explaining how git, gerrit, and jenkins work together" (:title result1))))
+    (testing "first gif url"
+      (is (= "http://31.tumblr.com/69/tumblr_inline_n0kq.gif" (:image-url result1))))))
