@@ -1,9 +1,15 @@
 (ns dashboard.gifs.core
   (:gen-class)
-  (:require [dashboard.gifs.parser :as parser]))
+  (:require [dashboard.gifs.parser :as parser]
+            [dashboard.gifs.output :as output]))
+
+(defn random-item [col]
+  (let [r (rand-int (count col))]
+    (nth col r)))
 
 (defn -main
   "I don't do a whole lot ... yet."
   [& args]
-  (println (parser/parse-rss (first args))))
+  (println (output/output-html
+            (random-item (parser/parse-rss (first args))))))
 
