@@ -4,7 +4,7 @@
             [dashboard.gifs.output :as output]))
 
 (defn random-item [col]
-  (let [r (rand-int (count col))]
+  (let [r (rand-int (+ 1 (count col)))]
     (nth col r)))
 
 (defn -main
