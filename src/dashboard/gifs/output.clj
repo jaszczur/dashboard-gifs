@@ -1,7 +1,10 @@
 (ns dashboard.gifs.output
-  (:require [clojure.xml :as xml]
-            [clojure.zip :as zip]
-            [clojure.data.zip.xml :as dzx]))
+  (:require [hiccup.core :as h]))
 
-
+(defn output-html [item]
+  (h/html [:html
+           [:body
+            [:h1 (:title item)]
+            [:img {:src (:image-url item)}]
+            [:address (:source item)]]]))
 
