@@ -2,10 +2,11 @@
   (:gen-class)
   (:require [dashboard.gifs.parser :as parser]
             [dashboard.gifs.output :as output]
-            [dashboard.gifs.cache  :as cache]))
+            [dashboard.gifs.cache  :as cache])
+  (:use [clojure.tools.logging]))
 
 (defn random-item [col]
-  (let [r (rand-int (+ 1 (count col)))]
+  (let [r (rand-int (count col))]
     (nth col r)))
 
 (def cached

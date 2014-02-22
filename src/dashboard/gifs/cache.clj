@@ -13,12 +13,11 @@
        (if-not (.exists output-file)
          (with-open [in  (io/input-stream url)
                      out (io/output-stream output-file)]
-           (info "Downloading file" url)
+           (info "Downloading file" url "to" output-file-name)
            (io/copy in out)))
        output-file-name)))
 
 (defn item-cached-in-dir [output-dir]
   (fn [item]
-    (assoc item
-      :image-url (cache-file (:image-url item) output-dir))))
+    (update-in item [:image-url] #(cache-file %1 output-dir))))
 
