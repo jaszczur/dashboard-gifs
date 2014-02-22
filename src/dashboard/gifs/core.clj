@@ -12,7 +12,7 @@
   (cache/item-cached-in-dir "/tmp"))
 
 (defn parse-files [urls]
-  (let [urls (if (empty? urls) ["http://thecodinglove.com/rss"] urls)]
+  (let [urls (if (empty? urls) ["http://devopsreactions.tumblr.com/rss"] urls)]
     (flatten (map #(parser/parse-rss %1) urls))))
 
 (defn -main
