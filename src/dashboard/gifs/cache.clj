@@ -1,5 +1,6 @@
 (ns dashboard.gifs.cache
-  (:require [clojure.java.io :as io]))
+  (:require [clojure.java.io :as io])
+  (:use [clojure.tools.logging]))
 
 (defn- short-file-name [filename]
   (str (Integer/toHexString (Math/abs (.hashCode filename))) ".img"))
@@ -12,7 +13,7 @@
        (if-not (.exists output-file)
          (with-open [in  (io/input-stream url)
                      out (io/output-stream output-file)]
-           (println "Downloading file" url)
+           (info "Downloading file" url)
            (io/copy in out)))
        output-file-name)))
 
